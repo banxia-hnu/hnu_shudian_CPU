@@ -1,0 +1,52 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6a3587b2: mfc90 + 0x887b2
+	0x00be4e45: resr_sfw + 0x4e45 (resr_sfw_dll_get_template_classes + 0xad5)
+	0x6a32c0b4: mfc90 + 0x5c0b4
+	</callstack>
+	<error>Current editor: RPW, SFW, WED</error>
+	<date>Tue Dec 03 22:27:43 2019</date>
+	<version>Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition</version>
+	<full_error>Access Violation at 0X6A3587B2
+Current editor: RPW, SFW, WED
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x78657400:
+	0x004315e8: quartus + 0x315e8 (Pjm_Uninit + 0x223a8)
+	0x0a1d077d: SogouPy + 0x11077d (ImeDestroy + 0x8d72d)
+	0x0a1d077d: SogouPy + 0x11077d (ImeDestroy + 0x8d72d)
+	0x0a1d077d: SogouPy + 0x11077d (ImeDestroy + 0x8d72d)
+	0x0a1d077d: SogouPy + 0x11077d (ImeDestroy + 0x8d72d)
+	0x751d9471: gdi32full + 0xa9471 (ScriptStringOut + 0x511)
+	0x6c409165: mfc90 + 0x59165
+	0x6c408699: mfc90 + 0x58699
+	0x6c40a783: mfc90 + 0x5a783
+	0x6c40a8c8: mfc90 + 0x5a8c8
+	0x6c4085b2: mfc90 + 0x585b2
+	0x760948ea: USER32 + 0x448ea (AddClipboardFormatListener + 0x4a)
+	0x7607613b: USER32 + 0x2613b (CallWindowProcW + 0xb2b)
+	0x7608a3a1: USER32 + 0x3a3a1 (CallWindowProcA + 0x81)
+	0x0040ac33: quartus + 0xac33
+	0x00413720: quartus + 0x13720 (Pjm_Uninit + 0x44e0)
+	0x00416de0: quartus + 0x16de0 (Pjm_Uninit + 0x7ba0)
+	0x760948ea: USER32 + 0x448ea (AddClipboardFormatListener + 0x4a)
+	</callstack>
+	<error>Current editor: GED, STED, STED, STED, RPW, SFW, WED, STED, MED, RPW, STED, STED, STED</error>
+	<date>Fri Dec 13 17:54:26 2019</date>
+	<version>Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition</version>
+	<full_error>Access Violation at 0X78657400
+Current editor: GED, STED, STED, STED, RPW, SFW, WED, STED, MED, RPW, STED, STED, STED
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition </full_error>
+</internal_error>
+

@@ -1,0 +1,27 @@
+|zjw_erjiguan
+cin[0] => eout[0]~0.DATAIN
+cin[1] => eout[1]~1.DATAIN
+cin[2] => eout[2]~2.DATAIN
+cin[3] => eout[3]~3.DATAIN
+cin[4] => eout[4]~4.DATAIN
+cin[5] => eout[5]~5.DATAIN
+cin[6] => eout[6]~6.DATAIN
+cin[7] => eout[7]~7.DATAIN
+IFOUT => eout[7]~7.OE
+IFOUT => eout[6]~6.OE
+IFOUT => eout[5]~5.OE
+IFOUT => eout[4]~4.OE
+IFOUT => eout[3]~3.OE
+IFOUT => eout[2]~2.OE
+IFOUT => eout[1]~1.OE
+IFOUT => eout[0]~0.OE
+eout[0] <= eout[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+eout[1] <= eout[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+eout[2] <= eout[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+eout[3] <= eout[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+eout[4] <= eout[4]~4.DB_MAX_OUTPUT_PORT_TYPE
+eout[5] <= eout[5]~5.DB_MAX_OUTPUT_PORT_TYPE
+eout[6] <= eout[6]~6.DB_MAX_OUTPUT_PORT_TYPE
+eout[7] <= eout[7]~7.DB_MAX_OUTPUT_PORT_TYPE
+
+

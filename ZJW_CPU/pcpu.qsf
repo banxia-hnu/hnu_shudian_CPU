@@ -1,0 +1,96 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+# Date created = 22:53:37  December 28, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		pcpu_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C3T100C8
+set_global_assignment -name TOP_LEVEL_ENTITY pcpu
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:53:37  DECEMBER 28, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name MISC_FILE "C:/Users/apple/Desktop/zjw_CPU/ZJW_CPU/pcpu.dpf"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name MISC_FILE "C:/Users/apple/Desktop/zjw_CPU - 副本/ZJW_CPU/pcpu.dpf"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_65 -to ocin[3]
+set_location_assignment PIN_68 -to ocin[4]
+set_location_assignment PIN_69 -to ocin[5]
+set_location_assignment PIN_71 -to ocin[7]
+set_location_assignment PIN_72 -to PC_out[0]
+set_global_assignment -name VHDL_FILE ../zjw_fenpingqi/zjw_fenpingqi.vhd
+set_global_assignment -name VHDL_FILE ../zjw_ALU_yiweiluoji/zjw_ALU_yiweiluoji.vhd
+set_global_assignment -name VHDL_FILE ../zjw_ALU/zjw_ALU_yiweiluoji.vhd
+set_global_assignment -name VHDL_FILE ../zjw_erjiguan/zjw_erjiguan.vhd
+set_global_assignment -name VHDL_FILE ../zjw_DCZ/zjw_DCZ.vhd
+set_global_assignment -name VHDL_FILE ../zjw_IR/zjw_IR.vhd
+set_global_assignment -name VHDL_FILE ../zjw_jicunqizu/zjw_jicunqizu.vhd
+set_global_assignment -name VHDL_FILE ../zjw_xuanzeqi/zjw_xuanzeqi.vhd
+set_global_assignment -name VHDL_FILE ../zjw_PC/zjw_PC.vhd
+set_global_assignment -name VHDL_FILE ../zjw_SM/zjw_SM.vhd
+set_global_assignment -name VHDL_FILE ../zjw_kaiguan/zjw_kaiguan.vhd
+set_global_assignment -name VHDL_FILE ../zjw_zhilingyimaqi/zjw_zhilingyimaqi.vhd
+set_global_assignment -name VHDL_FILE ../zjw_kongzhiqi/zjw_kongzhiqi.vhd
+set_global_assignment -name MIF_FILE pcpu.mif
+set_global_assignment -name BDF_FILE pcpu.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcpu.vwf
+set_location_assignment PIN_55 -to reset
+set_location_assignment PIN_56 -to sos
+set_location_assignment PIN_73 -to PC_out[1]
+set_location_assignment PIN_74 -to PC_out[2]
+set_location_assignment PIN_75 -to PC_out[3]
+set_location_assignment PIN_77 -to PC_out[5]
+set_location_assignment PIN_78 -to PC_out[6]
+set_location_assignment PIN_79 -to PC_out[7]
+set_location_assignment PIN_76 -to PC_out[4]
+set_location_assignment PIN_92 -to RAM_OUT[0]
+set_location_assignment PIN_97 -to RAM_OUT[1]
+set_location_assignment PIN_98 -to RAM_OUT[2]
+set_location_assignment PIN_99 -to RAM_OUT[3]
+set_location_assignment PIN_100 -to RAM_OUT[4]
+set_location_assignment PIN_1 -to RAM_OUT[5]
+set_location_assignment PIN_2 -to RAM_OUT[6]
+set_location_assignment PIN_3 -to RAM_OUT[7]
+set_location_assignment PIN_57 -to bout[0]
+set_location_assignment PIN_70 -to bout[3]
+set_global_assignment -name MISC_FILE "J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/ZJW_CPU/pcpu.dpf"

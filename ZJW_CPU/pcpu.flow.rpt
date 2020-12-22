@@ -1,0 +1,117 @@
+Flow report for pcpu
+Tue Dec 22 16:46:43 2020
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Flow Summary                                                           ;
++-------------------------+----------------------------------------------+
+; Flow Status             ; Successful - Tue Dec 22 16:46:43 2020        ;
+; Quartus II Version      ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name           ; pcpu                                         ;
+; Top-level Entity Name   ; pcpu                                         ;
+; Family                  ; Cyclone                                      ;
+; Device                  ; EP1C3T100C8                                  ;
+; Timing Models           ; Final                                        ;
+; Met timing requirements ; No                                           ;
+; Total logic elements    ; 248 / 2,910 ( 9 % )                          ;
+; Total pins              ; 59 / 65 ( 91 % )                             ;
+; Total virtual pins      ; 0                                            ;
+; Total memory bits       ; 2,048 / 59,904 ( 3 % )                       ;
+; Total PLLs              ; 0 / 1 ( 0 % )                                ;
++-------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/22/2020 16:46:36 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; pcpu                ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                      ;
++------------------------------------+-------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                             ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+-------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 83689962209849.160862679609600                                    ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/apple/Desktop/zjw_CPU/ZJW_CPU/pcpu.dpf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/apple/Desktop/zjw_CPU - 副本/ZJW_CPU/pcpu.dpf            ; --            ; --          ; --             ;
+; MISC_FILE                          ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/ZJW_CPU/pcpu.dpf ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                          ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                            ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                               ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+-------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 261 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 253 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 213 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 182 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; zjw              ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; zjw              ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; zjw              ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; zjw              ; Windows Vista ; 6.2        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off pcpu -c pcpu
+quartus_fit --read_settings_files=off --write_settings_files=off pcpu -c pcpu
+quartus_asm --read_settings_files=off --write_settings_files=off pcpu -c pcpu
+quartus_tan --read_settings_files=off --write_settings_files=off pcpu -c pcpu --timing_analysis_only
+
+
+

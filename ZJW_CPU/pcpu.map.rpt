@@ -1,0 +1,539 @@
+Analysis & Synthesis report for pcpu
+Tue Dec 22 16:46:38 2020
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for LPM_RAM_IO:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated
+ 12. Parameter Settings for User Entity Instance: LPM_RAM_IO:inst3
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Dec 22 16:46:38 2020        ;
+; Quartus II Version          ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name               ; pcpu                                         ;
+; Top-level Entity Name       ; pcpu                                         ;
+; Family                      ; Cyclone                                      ;
+; Total logic elements        ; 287                                          ;
+; Total pins                  ; 59                                           ;
+; Total virtual pins          ; 0                                            ;
+; Total memory bits           ; 2,048                                        ;
+; Total PLLs                  ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP1C3T100C8        ;                    ;
+; Top-level entity name                                        ; pcpu               ; pcpu               ;
+; Family name                                                  ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                               ;
++----------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+
+; ../zjw_fenpingqi/zjw_fenpingqi.vhd           ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_fenpingqi/zjw_fenpingqi.vhd           ;
+; ../zjw_ALU_yiweiluoji/zjw_ALU_yiweiluoji.vhd ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_ALU_yiweiluoji/zjw_ALU_yiweiluoji.vhd ;
+; ../zjw_erjiguan/zjw_erjiguan.vhd             ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_erjiguan/zjw_erjiguan.vhd             ;
+; ../zjw_DCZ/zjw_DCZ.vhd                       ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_DCZ/zjw_DCZ.vhd                       ;
+; ../zjw_IR/zjw_IR.vhd                         ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_IR/zjw_IR.vhd                         ;
+; ../zjw_jicunqizu/zjw_jicunqizu.vhd           ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_jicunqizu/zjw_jicunqizu.vhd           ;
+; ../zjw_xuanzeqi/zjw_xuanzeqi.vhd             ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_xuanzeqi/zjw_xuanzeqi.vhd             ;
+; ../zjw_PC/zjw_PC.vhd                         ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_PC/zjw_PC.vhd                         ;
+; ../zjw_SM/zjw_SM.vhd                         ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_SM/zjw_SM.vhd                         ;
+; ../zjw_kaiguan/zjw_kaiguan.vhd               ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_kaiguan/zjw_kaiguan.vhd               ;
+; ../zjw_zhilingyimaqi/zjw_zhilingyimaqi.vhd   ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_zhilingyimaqi/zjw_zhilingyimaqi.vhd   ;
+; ../zjw_kongzhiqi/zjw_kongzhiqi.vhd           ; yes             ; User VHDL File                     ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_kongzhiqi/zjw_kongzhiqi.vhd           ;
+; pcpu.bdf                                     ; yes             ; User Block Diagram/Schematic File  ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/ZJW_CPU/pcpu.bdf                          ;
+; LPM_RAM_IO.tdf                               ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/LPM_RAM_IO.tdf                                          ;
+; altram.inc                                   ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altram.inc                                              ;
+; lpm_mux.inc                                  ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/lpm_mux.inc                                             ;
+; lpm_decode.inc                               ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/lpm_decode.inc                                          ;
+; aglobal90.inc                                ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/aglobal90.inc                                           ;
+; altram.tdf                                   ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altram.tdf                                              ;
+; memmodes.inc                                 ; yes             ; Megafunction                       ; d:/quartus/libraries/others/maxplus2/memmodes.inc                                          ;
+; altsyncram.inc                               ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altsyncram.inc                                          ;
+; altqpram.inc                                 ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altqpram.inc                                            ;
+; altsyncram.tdf                               ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altsyncram.tdf                                          ;
+; stratix_ram_block.inc                        ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;
+; a_rdenreg.inc                                ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/a_rdenreg.inc                                           ;
+; altrom.inc                                   ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altrom.inc                                              ;
+; altdpram.inc                                 ; yes             ; Megafunction                       ; d:/quartus/libraries/megafunctions/altdpram.inc                                            ;
+; db/altsyncram_pb91.tdf                       ; yes             ; Auto-Generated Megafunction        ; J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/ZJW_CPU/db/altsyncram_pb91.tdf            ;
++----------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 287   ;
+;     -- Combinational with no register       ; 218   ;
+;     -- Register only                        ; 46    ;
+;     -- Combinational with a register        ; 23    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 125   ;
+;     -- 3 input functions                    ; 73    ;
+;     -- 2 input functions                    ; 38    ;
+;     -- 1 input functions                    ; 5     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 241   ;
+;     -- arithmetic mode                      ; 46    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 8     ;
+;     -- asynchronous clear/load mode         ; 66    ;
+;                                             ;       ;
+; Total registers                             ; 69    ;
+; Total logic cells in carry chains           ; 50    ;
+; I/O pins                                    ; 59    ;
+; Total memory bits                           ; 2048  ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 67    ;
+; Total fan-out                               ; 1184  ;
+; Average fan-out                             ; 3.34  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                    ; Library Name ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+--------------+
+; |pcpu                                        ; 287 (0)     ; 69           ; 2048        ; 59   ; 0            ; 218 (0)      ; 46 (0)            ; 23 (0)           ; 50 (0)          ; 0 (0)      ; |pcpu                                                                                  ; work         ;
+;    |lpm_ram_io:inst3|                        ; 11 (11)     ; 0            ; 2048        ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|lpm_ram_io:inst3                                                                 ; work         ;
+;       |altram:sram|                          ; 0 (0)       ; 0            ; 2048        ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|lpm_ram_io:inst3|altram:sram                                                     ; work         ;
+;          |altsyncram:ram_block|              ; 0 (0)       ; 0            ; 2048        ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|lpm_ram_io:inst3|altram:sram|altsyncram:ram_block                                ; work         ;
+;             |altsyncram_pb91:auto_generated| ; 0 (0)       ; 0            ; 2048        ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated ; work         ;
+;    |zjw_ALU_yiweiluoji:inst20|               ; 78 (78)     ; 0            ; 0           ; 0    ; 0            ; 78 (78)      ; 0 (0)             ; 0 (0)            ; 18 (18)         ; 0 (0)      ; |pcpu|zjw_ALU_yiweiluoji:inst20                                                        ; work         ;
+;    |zjw_DCZ:inst15|                          ; 2 (2)       ; 2            ; 0           ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_DCZ:inst15                                                                   ; work         ;
+;    |zjw_IR:inst14|                           ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_IR:inst14                                                                    ; work         ;
+;    |zjw_PC:inst12|                           ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |pcpu|zjw_PC:inst12                                                                    ; work         ;
+;    |zjw_SM:inst11|                           ; 1 (1)       ; 1            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_SM:inst11                                                                    ; work         ;
+;    |zjw_SM:inst8|                            ; 1 (1)       ; 1            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_SM:inst8                                                                     ; work         ;
+;    |zjw_fenpingqi:inst6|                     ; 56 (56)     ; 25           ; 0           ; 0    ; 0            ; 31 (31)      ; 13 (13)           ; 12 (12)          ; 24 (24)         ; 0 (0)      ; |pcpu|zjw_fenpingqi:inst6                                                              ; work         ;
+;    |zjw_jicunqizu:inst13|                    ; 59 (59)     ; 24           ; 0           ; 0    ; 0            ; 35 (35)      ; 24 (24)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_jicunqizu:inst13                                                             ; work         ;
+;    |zjw_kaiguan:inst7|                       ; 8 (8)       ; 0            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_kaiguan:inst7                                                                ; work         ;
+;    |zjw_kongzhiqi:inst1|                     ; 15 (15)     ; 0            ; 0           ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_kongzhiqi:inst1                                                              ; work         ;
+;    |zjw_xuanzeqi:inst|                       ; 25 (25)     ; 0            ; 0           ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_xuanzeqi:inst                                                                ; work         ;
+;    |zjw_zhilingyimaqi:inst4|                 ; 15 (15)     ; 0            ; 0           ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pcpu|zjw_zhilingyimaqi:inst4                                                          ; work         ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------+
+; Name                                                                                        ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------+
+; lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; ./pcpu.mif ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; zjw_ALU_yiweiluoji:inst20|ZZ[8]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[7]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[0]_230                 ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[6]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[5]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[4]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[3]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[2]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[1]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_ALU_yiweiluoji:inst20|ZZ[0]                     ; zjw_ALU_yiweiluoji:inst20|ZZ[8]~69 ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[0]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[1]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[2]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[3]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[4]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[5]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[6]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_xuanzeqi:inst|OUT1[7]                           ; zjw_xuanzeqi:inst|OUT1[7]~17       ; yes                    ;
+; zjw_kongzhiqi:inst1|MADD[0]                         ; GND                                ; yes                    ;
+; zjw_kongzhiqi:inst1|MADD[1]                         ; GND                                ; yes                    ;
+; Number of user-specified and inferred latches = 20  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 69    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 66    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |pcpu|zjw_zhilingyimaqi:inst4|MOVC       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |pcpu|zjw_xuanzeqi:inst|OUT1[5]~11       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |pcpu|zjw_jicunqizu:inst13|BUSB[7]~16    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |pcpu|zjw_jicunqizu:inst13|BUSA[0]~1     ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |pcpu|zjw_ALU_yiweiluoji:inst20|ZZ[6]~55 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_RAM_IO:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                        ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
++---------------------------------+--------------------+------+-------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_RAM_IO:inst3 ;
++------------------------+--------------+-----------------------+
+; Parameter Name         ; Value        ; Type                  ;
++------------------------+--------------+-----------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer        ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer        ;
+; LPM_NUMWORDS           ; 256          ; Signed Integer        ;
+; LPM_INDATA             ; REGISTERED   ; Untyped               ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped               ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped               ;
+; LPM_FILE               ; ./pcpu.mif   ; Untyped               ;
+; USE_EAB                ; ON           ; Untyped               ;
+; DEVICE_FAMILY          ; Cyclone      ; Untyped               ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE        ;
++------------------------+--------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Dec 22 16:46:36 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pcpu -c pcpu
+Info: Found 2 design units, including 1 entities, in source file ../zjw_fenpingqi/zjw_fenpingqi.vhd
+    Info: Found design unit 1: zjw_fenpingqi-ART
+    Info: Found entity 1: zjw_fenpingqi
+Info: Found 2 design units, including 1 entities, in source file ../zjw_ALU_yiweiluoji/zjw_ALU_yiweiluoji.vhd
+    Info: Found design unit 1: zjw_ALU_yiweiluoji-pten
+    Info: Found entity 1: zjw_ALU_yiweiluoji
+Warning: Can't analyze file -- file J:/3-大二上学期/数字电路/CPU/张继伟+201808010829/zjw_ALU/zjw_ALU_yiweiluoji.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file ../zjw_erjiguan/zjw_erjiguan.vhd
+    Info: Found design unit 1: zjw_erjiguan-peleven
+    Info: Found entity 1: zjw_erjiguan
+Info: Found 2 design units, including 1 entities, in source file ../zjw_DCZ/zjw_DCZ.vhd
+    Info: Found design unit 1: zjw_DCZ-pnine
+    Info: Found entity 1: zjw_DCZ
+Info: Found 2 design units, including 1 entities, in source file ../zjw_IR/zjw_IR.vhd
+    Info: Found design unit 1: zjw_IR-peight
+    Info: Found entity 1: zjw_IR
+Info: Found 2 design units, including 1 entities, in source file ../zjw_jicunqizu/zjw_jicunqizu.vhd
+    Info: Found design unit 1: zjw_jicunqizu-pseven
+    Info: Found entity 1: zjw_jicunqizu
+Info: Found 2 design units, including 1 entities, in source file ../zjw_xuanzeqi/zjw_xuanzeqi.vhd
+    Info: Found design unit 1: zjw_xuanzeqi-psix
+    Info: Found entity 1: zjw_xuanzeqi
+Info: Found 2 design units, including 1 entities, in source file ../zjw_PC/zjw_PC.vhd
+    Info: Found design unit 1: zjw_PC-pfive
+    Info: Found entity 1: zjw_PC
+Info: Found 2 design units, including 1 entities, in source file ../zjw_SM/zjw_SM.vhd
+    Info: Found design unit 1: zjw_SM-pfour
+    Info: Found entity 1: zjw_SM
+Info: Found 2 design units, including 1 entities, in source file ../zjw_kaiguan/zjw_kaiguan.vhd
+    Info: Found design unit 1: zjw_kaiguan-ppp
+    Info: Found entity 1: zjw_kaiguan
+Info: Found 2 design units, including 1 entities, in source file ../zjw_zhilingyimaqi/zjw_zhilingyimaqi.vhd
+    Info: Found design unit 1: zjw_zhilingyimaqi-pp
+    Info: Found entity 1: zjw_zhilingyimaqi
+Info: Found 2 design units, including 1 entities, in source file ../zjw_kongzhiqi/zjw_kongzhiqi.vhd
+    Info: Found design unit 1: zjw_kongzhiqi-p
+    Info: Found entity 1: zjw_kongzhiqi
+Info: Found 1 design units, including 1 entities, in source file pcpu.bdf
+    Info: Found entity 1: pcpu
+Info: Elaborating entity "pcpu" for the top level hierarchy
+Info: Elaborating entity "zjw_jicunqizu" for hierarchy "zjw_jicunqizu:inst13"
+Info (10041): Inferred latch for "BUSB[0]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[1]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[2]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[3]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[4]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[5]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[6]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSB[7]" at zjw_jicunqizu.vhd(37)
+Info (10041): Inferred latch for "BUSA[0]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[1]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[2]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[3]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[4]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[5]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[6]" at zjw_jicunqizu.vhd(34)
+Info (10041): Inferred latch for "BUSA[7]" at zjw_jicunqizu.vhd(34)
+Info: Elaborating entity "zjw_IR" for hierarchy "zjw_IR:inst14"
+Info: Elaborating entity "zjw_kongzhiqi" for hierarchy "zjw_kongzhiqi:inst1"
+Info (10041): Inferred latch for "MADD[0]" at zjw_kongzhiqi.vhd(23)
+Info (10041): Inferred latch for "MADD[1]" at zjw_kongzhiqi.vhd(23)
+Info: Elaborating entity "zjw_zhilingyimaqi" for hierarchy "zjw_zhilingyimaqi:inst4"
+Info: Elaborating entity "zjw_SM" for hierarchy "zjw_SM:inst11"
+Info: Elaborating entity "zjw_fenpingqi" for hierarchy "zjw_fenpingqi:inst6"
+Info: Elaborating entity "zjw_DCZ" for hierarchy "zjw_DCZ:inst15"
+Warning (10492): VHDL Process Statement warning at zjw_DCZ.vhd(13): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "zjw_ALU_yiweiluoji" for hierarchy "zjw_ALU_yiweiluoji:inst20"
+Warning (10492): VHDL Process Statement warning at zjw_ALU_yiweiluoji.vhd(19): signal "M" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_ALU_yiweiluoji.vhd(31): signal "FRBUS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_ALU_yiweiluoji.vhd(33): signal "FLBUS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_ALU_yiweiluoji.vhd(42): signal "ZZ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at zjw_ALU_yiweiluoji.vhd(17): inferring latch(es) for signal or variable "ZZ", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ZZ[0]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[1]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[2]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[3]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[4]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[5]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[6]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[7]" at zjw_ALU_yiweiluoji.vhd(17)
+Info (10041): Inferred latch for "ZZ[8]" at zjw_ALU_yiweiluoji.vhd(17)
+Info: Elaborating entity "LPM_RAM_IO" for hierarchy "LPM_RAM_IO:inst3"
+Info: Elaborated megafunction instantiation "LPM_RAM_IO:inst3"
+Info: Instantiated megafunction "LPM_RAM_IO:inst3" with the following parameter:
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_FILE" = "./pcpu.mif"
+    Info: Parameter "LPM_INDATA" = "REGISTERED"
+    Info: Parameter "LPM_NUMWORDS" = "256"
+    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+Info: Elaborating entity "altram" for hierarchy "LPM_RAM_IO:inst3|altram:sram"
+Warning: Assertion warning: altram does not support Cyclone device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone devices
+Info: Elaborated megafunction instantiation "LPM_RAM_IO:inst3|altram:sram", which is child of megafunction instantiation "LPM_RAM_IO:inst3"
+Info: Elaborating entity "altsyncram" for hierarchy "LPM_RAM_IO:inst3|altram:sram|altsyncram:ram_block"
+Info: Elaborated megafunction instantiation "LPM_RAM_IO:inst3|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "LPM_RAM_IO:inst3"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_pb91.tdf
+    Info: Found entity 1: altsyncram_pb91
+Info: Elaborating entity "altsyncram_pb91" for hierarchy "LPM_RAM_IO:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated"
+Info: Elaborating entity "zjw_xuanzeqi" for hierarchy "zjw_xuanzeqi:inst"
+Warning (10492): VHDL Process Statement warning at zjw_xuanzeqi.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_xuanzeqi.vhd(17): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_xuanzeqi.vhd(19): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at zjw_xuanzeqi.vhd(12): inferring latch(es) for signal or variable "OUT1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "OUT1[0]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[1]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[2]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[3]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[4]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[5]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[6]" at zjw_xuanzeqi.vhd(12)
+Info (10041): Inferred latch for "OUT1[7]" at zjw_xuanzeqi.vhd(12)
+Info: Elaborating entity "zjw_PC" for hierarchy "zjw_PC:inst12"
+Info: Elaborating entity "zjw_kaiguan" for hierarchy "zjw_kaiguan:inst7"
+Warning (10492): VHDL Process Statement warning at zjw_kaiguan.vhd(15): signal "ocin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at zjw_kaiguan.vhd(17): signal "buscin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "zjw_erjiguan" for hierarchy "zjw_erjiguan:inst19"
+Warning (10492): VHDL Process Statement warning at zjw_erjiguan.vhd(15): signal "cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "inst26" feeding internal logic into a wire
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[0]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[1]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[2]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[3]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[4]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[5]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[6]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSB[7]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[0]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[1]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[2]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[3]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[4]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[5]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[6]" is permanently enabled
+Warning: LATCH primitive "zjw_jicunqizu:inst13|BUSA[7]" is permanently enabled
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[7]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[6]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[5]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[4]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[3]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[2]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[1]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "zjw_ALU_yiweiluoji:inst20|Q[0]" to the node "zjw_ALU_yiweiluoji:inst20|Equal5" into an OR gate
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[7]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[6]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[6]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[5]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[4]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[4]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[3]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[3]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[2]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[1]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_ram_io:inst3|datatri[0]" to the node "lpm_ram_io:inst3|altram:sram|altsyncram:ram_block|altsyncram_pb91:auto_generated|q_a[0]" into an OR gate
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[0]_230 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|FBUS
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_jicunqizu:inst13|BUSA[7]~15
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_jicunqizu:inst13|BUSA[7]~15
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_jicunqizu:inst13|BUSA[7]~15
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_ALU_yiweiluoji:inst20|ZZ[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|M
+Warning: Latch zjw_xuanzeqi:inst|OUT1[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Latch zjw_xuanzeqi:inst|OUT1[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal zjw_kongzhiqi:inst1|MADD[1]
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sos"
+Info: Implemented 354 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 48 output pins
+    Info: Implemented 287 logic cells
+    Info: Implemented 8 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 89 warnings
+    Info: Peak virtual memory: 261 megabytes
+    Info: Processing ended: Tue Dec 22 16:46:38 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

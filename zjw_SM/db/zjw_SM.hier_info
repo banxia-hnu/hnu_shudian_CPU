@@ -1,0 +1,6 @@
+|zjw_SM
+clk => Q1.CLK
+reset => Q1.ACLR
+SM <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+
+
